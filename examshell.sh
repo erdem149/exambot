@@ -67,27 +67,27 @@ function atama()
 	echo
 }
 
-function sor()
-{
-	for((i = 0; i <= 6 ; i++)) do
-		atama
-		read  -p "${purple}Çıktıyı yazınız : ${reset}[${green}$dogru${purple}/${red}$yanlis${purple}] :${reset}" input
-		if [ "$input" ] && [ "$input" = "$cev" ]; then
-			echo ${green}[OK]${reset}
-				dogru=$(($dogru + 1))
-		else
-			echo
-			read -p "${purple}Yanlış tekrar deneyiniz ${reset}[${green}$dogru${purple}/${red}$yanlis${purple}] :${reset}" input
-			if [ "$input" ] && [ "$input" = "$cev" ]; then
-				echo ${green}[OK]${reset}
-				dogru=$(($dogru + 1))
-			else
-				echo ${red}[KO]${reset}
-				yanlis=$(($yanlis + 1))
-			fi
-	done
-	mv ../.trash/* ./
-}
+# function sor()
+# {
+# 	for((i = 0; i <= 6 ; i++)) do
+# 		atama
+# 		read  -p "${purple}Çıktıyı yazınız : ${reset}[${green}$dogru${purple}/${red}$yanlis${purple}] :${reset}" input
+# 		if [ "$input" ] && [ "$input" = "$cev" ]; then
+# 			echo ${green}[OK]${reset}
+# 				dogru=$(($dogru + 1))
+# 		else
+# 			echo
+# 			read -p "${purple}Yanlış tekrar deneyiniz ${reset}[${green}$dogru${purple}/${red}$yanlis${purple}] :${reset}" input
+# 			if [ "$input" ] && [ "$input" = "$cev" ]; then
+# 				echo ${green}[OK]${reset}
+# 				dogru=$(($dogru + 1))
+# 			else
+# 				echo ${red}[KO]${reset}
+# 				yanlis=$(($yanlis + 1))
+# 			fi
+# 	done
+# 	mv ../.trash/* ./
+# }
 
 # Commands
 
@@ -102,7 +102,7 @@ if [ -n "$input" ] && [ "$input" = "y" ]; then
 	gcc ./source/sec.c -o sec
 	mv sec ./.tmp
 	cd ./sorular
-	sor
+	#sor
 	rm -rf ../.trash
 	rm -rf ../.tmp
 fi
