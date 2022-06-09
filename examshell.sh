@@ -90,7 +90,9 @@ function atama()
 # }
 
 # Commands
+   
 
+   
 kontrol
 echo ${green}"[created by eryilmaz]"
 echo ""
