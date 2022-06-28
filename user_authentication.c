@@ -15,7 +15,9 @@ int main(void)
     password_d = ft_strjoin(password_d,"erdem");
     hideusername = password(username);
     hidepassword = password(password_d);
+    ft_putstr_fd("1\n",fd);
     ft_putstr_fd(hideusername,fd);
+    ft_putchar_fd('\n',fd);
     ft_putstr_fd(hidepassword,fd);
     close(fd);
 }

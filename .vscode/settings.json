@@ -3,6 +3,7 @@
         "history.h": "c",
         "readline.h": "c",
         "libft.h": "c",
-        "examshell.h": "c"
+        "examshell.h": "c",
+        "stdio.h": "c"
     }
 }

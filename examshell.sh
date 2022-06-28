@@ -9,8 +9,20 @@ green=$'\033[0;32m'
 echo ${green}"[created by eryilmaz]"
 echo ""
 echo ${green}"Hoşgeldiniz"
-read -p "${purple}examshell> ${reset}" input
 echo ""
-git pull
-mkdir .sorular
-cd .sorular
+cev=$(./src/cev)
+if [ $cev = "0" ]; then
+    echo "user_authentication"
+    ./src/user_authentication
+else
+    ./src/user_authentication_login
+    erdem=$(./src/cevst)
+    if [ $erdem = "1" ]; then
+        ./examshell
+    else
+        echo "lütfen daha sonra tekrar deneyin"
+    fi
+fi
+#git pull
+#mkdir .sorular
+#cd .sorular

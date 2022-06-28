@@ -13,14 +13,12 @@
 
 void grademe(void)
 {
-    
+
 }
 
 int main(void)
 {
     const char *str;
-    int i;
-    i=0;
 
     while (g_satatus == 0)
     {
