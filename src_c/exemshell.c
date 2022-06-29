@@ -9,9 +9,8 @@
 /*   Updated: 2022/06/24 16:40:03 by eryilmaz         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "examshell.h"
-// #include <curses.h>
-// #include <term.h>
+#include "../h/examshell.h"
+
 void grademe(void)
 {
     pid_t pro;
@@ -24,7 +23,11 @@ void grademe(void)
     }
     else if(pro == 0)
     {
-        execl("./exam-mod.sh",NULL,NULL);
+       int status = execl("./sh/exam-mod.sh",NULL,NULL);
+       if(status == -1)
+       {
+           printf("hata litfen kaynak sh dosyasını düzelt\n");
+       }
     }
 }
 
