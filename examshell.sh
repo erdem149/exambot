@@ -18,9 +18,9 @@ else
     ./src/user_authentication_login
     erdem=$(./src/cevst)
     if [ $erdem = "1" ]; then
-        ./examshell
+       ./examshell
     else
-        echo "lütfen daha sonra tekrar deneyin"
+        echo "[lütfen daha sonra tekrar deneyin]"
     fi
 fi
 #git pull

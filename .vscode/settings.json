@@ -4,6 +4,9 @@
         "readline.h": "c",
         "libft.h": "c",
         "examshell.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "signal.h": "c",
+        "stdlib.h": "c",
+        "sstream": "c"
     }
 }
